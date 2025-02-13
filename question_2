@@ -1,0 +1,21 @@
+class Example {
+    static int s = 10;  // Shared by all objects
+    final int f= 20;  // Cannot be changed
+    static void staticMethod() {
+        System.out.println("Static method called.");
+    }
+    final void finalMethod() {
+        System.out.println("Final method called.");
+    }
+}
+public class a2 {
+    public static void main(String[] args) {
+        Example s1 = new Example();
+        System.out.println(s1.s);
+        s1.staticMethod();
+        System.out.println(Example.s);
+        Example.staticMethod();
+        System.out.println(s1.f);
+        s1.finalMethod();
+    }
+}
